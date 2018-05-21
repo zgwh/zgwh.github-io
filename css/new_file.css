@@ -1,65 +1,94 @@
-*{
-	margin: 0;
-	padding: 0;
-	border: 0;
-	list-style: none;
+*{margin: 0;padding: 0;border: 0;list-style: none;}
+*{font-size: 12px;font-family: "宋体";}
+a{text-decoration: none;color: #666;}
+em{font-style: normal;}
+.tuan{
+	width: 298px;
+	height: 320px;
+	overflow: hidden;
+	margin: 10px auto;
+	padding: 10px 12px;
+	border: 1px solid #666;
 }
-a{
-	text-decoration: none;
-	font-size: 30px;
-	color: #fff;
-}
-div{
-	width: 580px;
+.box01{
 	height: 200px;
-	margin: 50px auto;
 	position: relative;
 }
-a{
-	float: left;
-	width: 40px;
-	height: 100px;
-	line-height: 90px;
-	background: #333;
-	opacity: 0.6;
-	border-radius: 4px;
-	text-align: center;
-	display: none;
-	cursor: pointer;
-}
-.left{
-	position: absolute;
-	left: -30px;
-	top: 155px;
-}
-.right{
-	position: absolute;
-	right: -50px;
-	top: 155px;
-}
-div:hover a{
-	display: block;
-}
-ul{
-	width: 110px;
-	height: 20px;
-	background: #333;
-	opacity: 0.5;
-	border-radius: 8px;
-	position: absolute;
-	left: 480px;
-	top: 430px;
-	text-align: center;
-}
-li{
-	width: 5px;
-	height: 5px;
-	background: white;
-	border-radius: 50%;
+.name{
+	height: 27px;
 	display: inline-block;
 }
-.max{
-	width: 12px;
-	background: #03BDE4;
-	border-radius: 6px;
+.name a{
+	font-size: 20px;
+	font-family: "楷体";
+}
+.pic{
+	position: absolute;
+	top: -5px;
+	left: 63px;
+}
+ul{
+	width: 120px;
+	height: 20px;
+	position: absolute;
+	right: 0px;
+	bottom: 5px;
+}
+ul li{
+	width: 16px;
+	height: 16px;
+	background: #FFF;
+	border: 2px solid #f53f00;
+	float: left;
+	margin-right: 10px;
+}
+ul li{
+	background-color: #fdfc01;
+}
+ul li a{
+	font-size: 12px;
+	font-weight: bold;
+	display: block;
+	text-align: center;
+	
+}
+.box02{
+	height: 86px;
+	margin-top: 14px;
+}
+.tit{
+	height: 50px;
+	line-height: 20px;
+	font-size: 14px;
+}
+.tit a{
+	color: #000;
+}
+.tit a span{
+	color: #000;
+	font-weight: bold;
+}
+.price{
+	width: 190px;
+	height: 30px;
+	float: left;
+}
+.price span{
+	font-family: "microsoft yahei";
+	font-size: 24px;
+	color: #FF7F00;
+}
+.btn{
+	width: 85px;
+	height: 30px;
+	background: #feaa62;
+	border-radius: 4px;
+	float: right;
+}
+.btn strong{
+	font-size: 18px;
+	line-height: 35px;
+	color: #FFF;
+	display: block;
+	text-align: center;
 }
