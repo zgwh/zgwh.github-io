@@ -1,36 +1,31 @@
-
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title>团购网商品展示</title>
+		<title></title>
+		<link rel="stylesheet" href="css/new_file.css" />
 	</head>
-	<link rel="stylesheet" type="text/css" href="css/new_file.css" />
 	<body>
-		<div class="tuan">
-			<div class="box01">
-				<h1 class="name"><a href="#">团购网</a></h1>
-				<img src="img/new.jpg"/>
-				<p><a href="#"><img src="img/pic.jpg" alt="商品名称"/></a></p>
-				<ul>
-					<li><a href="#">1</a></li>
-					<li><a href="#">2</a></li>
-					<li><a href="#">3</a></li>
-					<li><a href="#">4</a></li>
-				</ul>
-			</div>
-			<div class="box02">
-				<p class="tit">
-					<a href="#"><span>【69店通用】</span>过桥米线代金劵1张，无需预约，全场通用</a>
-				</p>
-				<p class="price">
-					<span>￥19.9</span>
-					<em>原价：￥39|6.6折</em>
-				</p>
-				<p>
-					<strong><img src="img/btn.jpg"/></strong>
-				</p>
-			</div>
-		</div>
+		<form action="http://127.0.0.1:80/server.php" method="=get"></form>
+		账号：
+		<input type="text" name="username" />
+		密码：
+		<input type="password" name="password" />
+	</form>-->
+	<form id="formBox" method="post" autocomplete="on">
+		<span class="username">用户名：<input type="text" id="user" /><br /><br /></span>
+		<span class="psword">昵&nbsp;&nbsp;&nbsp;称：<input type="text" id="psw" /><br /><br /><span>
+		性别  
+		<input type="radio" name="sex" checked="checked"/>男
+		<input type="radio" name="sex" />女<br /><br />
+		兴趣
+		<input type="checkbox" />唱歌
+		<input type="checkbox" />玩电脑
+		<input type="checkbox" />看小说<br /><br />
+		<input type="reset" />
+		<input type="submit" value="提交"/>
+		<input type="submit" value="取消"/>
+		<input type="image" src="img/2.jpg" />
+	</form>
 	</body>
 </html>
