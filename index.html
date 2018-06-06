@@ -3,29 +3,86 @@
 	<head>
 		<meta charset="utf-8" />
 		<title></title>
-		<link rel="stylesheet" href="css/new_file.css" />
+		<style type="text/css">
+			input{
+				display: none;
+			}
+			label{
+				display: inline-block;
+				width: 60px;
+				height: 30px;
+				text-align: center;
+				line-height: 30px;
+			}
+			#cons{
+				box-sizing: border-box;
+				width: 600px;
+				height: 480px;
+				border: 1px solid black;
+				position: relative;
+				overflow: hidden;
+			}
+			#cons *{
+				width: 600px;
+				height: 480px;
+			}
+			#con1{
+				background: greenyellow;
+			}
+			#con2{
+				background: bisque;
+			}
+			#con3{
+				background: yellow;
+			}
+			#lou1:checked~#label1{
+				background: black;
+				color: white;
+			}
+			#lou2:checked~#label2{
+				background: black;
+				color: white;
+			}
+			#lou3:checked~#label3{
+				background: black;
+				color: white;
+			}
+			#lou1:checked~#cons #con1
+			{
+				position: relative;
+			    top: 0px;
+			}
+			#lou2:checked~#cons #con2
+			{
+				position: relative;
+			    top: -480px;
+			}
+			#lou3:checked~#cons #con3
+			{
+				position: relative;
+			    top: -960px;
+			}
+		</style>
 	</head>
 	<body>
-		<form action="http://127.0.0.1:80/server.php" method="=get"></form>
-		账号：
-		<input type="text" name="username" />
-		密码：
-		<input type="password" name="password" />
-	</form>-->
-	<form id="formBox" method="post" autocomplete="on">
-		<span class="username">用户名：<input type="text" id="user" /><br /><br /></span>
-		<span class="psword">昵&nbsp;&nbsp;&nbsp;称：<input type="text" id="psw" /><br /><br /><span>
-		性别  
-		<input type="radio" name="sex" checked="checked"/>男
-		<input type="radio" name="sex" />女<br /><br />
-		兴趣
-		<input type="checkbox" />唱歌
-		<input type="checkbox" />玩电脑
-		<input type="checkbox" />看小说<br /><br />
-		<input type="reset" />
-		<input type="submit" value="提交"/>
-		<input type="submit" value="取消"/>
-		<input type="image" src="img/2.jpg" />
-	</form>
+		<div id="lous">
+			<input type="radio" name="lou" checked="checked" id="lou1" />
+			<input type="radio" name="lou" id="lou2" />
+			<input type="radio" name="lou" id="lou3" />
+			<label for="lou1" id="label1">新闻</label>
+			<label for="lou2" id="label2">通知</label>
+		    <label for="lou3" id="label3">公告</label>
+		    <div id="cons">
+		    	<div id="con1">
+		    		新闻内容
+		    	</div>
+		    	<div id="con2">
+		    		通知内容
+		    	</div>
+		    	<div id="con3">
+		    		公告内容
+		    	</div>
+		    </div>
+		</div>
 	</body>
 </html>
