@@ -2,87 +2,20 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title></title>
-		<style type="text/css">
-			input{
-				display: none;
+		<title>改变网页背景颜色</title>
+		<script>
+			function color(str){
+				document.body.style.backgroundColor=str;
 			}
-			label{
-				display: inline-block;
-				width: 60px;
-				height: 30px;
-				text-align: center;
-				line-height: 30px;
-			}
-			#cons{
-				box-sizing: border-box;
-				width: 600px;
-				height: 480px;
-				border: 1px solid black;
-				position: relative;
-				overflow: hidden;
-			}
-			#cons *{
-				width: 600px;
-				height: 480px;
-			}
-			#con1{
-				background: greenyellow;
-			}
-			#con2{
-				background: bisque;
-			}
-			#con3{
-				background: yellow;
-			}
-			#lou1:checked~#label1{
-				background: black;
-				color: white;
-			}
-			#lou2:checked~#label2{
-				background: black;
-				color: white;
-			}
-			#lou3:checked~#label3{
-				background: black;
-				color: white;
-			}
-			#lou1:checked~#cons #con1
-			{
-				position: relative;
-			    top: 0px;
-			}
-			#lou2:checked~#cons #con2
-			{
-				position: relative;
-			    top: -480px;
-			}
-			#lou3:checked~#cons #con3
-			{
-				position: relative;
-			    top: -960px;
-			}
-		</style>
+			
+		</script>
 	</head>
 	<body>
-		<div id="lous">
-			<input type="radio" name="lou" checked="checked" id="lou1" />
-			<input type="radio" name="lou" id="lou2" />
-			<input type="radio" name="lou" id="lou3" />
-			<label for="lou1" id="label1">新闻</label>
-			<label for="lou2" id="label2">通知</label>
-		    <label for="lou3" id="label3">公告</label>
-		    <div id="cons">
-		    	<div id="con1">
-		    		新闻内容
-		    	</div>
-		    	<div id="con2">
-		    		通知内容
-		    	</div>
-		    	<div id="con3">
-		    		公告内容
-		    	</div>
-		    </div>
-		</div>
+		<input type="button" value="设为红色" onclick="color('red')" >
+		<input type="button" value="设为黄色" onclick="color('yellow')" >
+		<input type="button" value="设为蓝色" onclick="color('blue')" >
+		<input type="button" value="设为紫色" onclick="color('#921AFF')" >
+		<input type="button" value="设为粉色" onclick="color('#FFC1E0')" >
+		<input type="button" value="设为橙色" onclick="color('#FFBB77')" >
 	</body>
 </html>
