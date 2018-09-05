@@ -3,7 +3,13 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>改变网页背景颜色</title>
-		<script>
+		<style type="text/css">
+		p{
+				text-indent: 2em;
+				line-height: 1.5;
+			}
+		</style>	
+		<script type="text/javascript">
 			function color(str){
 				document.body.style.backgroundColor=str;
 			}
@@ -11,10 +17,19 @@
 				var chgColor=document.getElementById("chgColor");
 				document.body.style.backgroundColor=chgColor.value;
 			}
+			function ziColor(){
+			
+				var col=document.getElementById("color")
+				var a=document.getElementById("a");
+			    a.style.color=col.value;
+			}
+			
 			
 		</script>
 	</head>
 	<body>
+	<p id="a" ">一段文一段文一段文一段文一段文一段文一段文一段文一段文一段文一段文一段文一段文一段文一段文一段文</p>
+		<input type="color"  name="" id="color" value="#ff0000" onchange="ziColor()"/>
 		<input type="button" value="设为红色" onclick="color('red')" >
 		<input type="button" value="设为黄色" onclick="color('yellow')" >
 		<input type="button" value="设为蓝色" onclick="color('blue')" >
