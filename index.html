@@ -2,20 +2,99 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title>改变网页背景颜色</title>
-		<script>
-			function color(str){
-				document.body.style.backgroundColor=str;
+		<title>猜数字游戏</title>
+		<style type="text/css">
+			.guessNumber{
+				width: 300px;
+				height: 300px;
+				margin: auto;
+				position: absolute;
+				left: 0px;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				
+				
+			}
+			.guessNumber h2{
+				text-align: center;
+			}
+			.guessNumber .guessC{
+				width: 252px;
+				margin: auto;
+			}
+			.guessNumber #numInput{
+				
+				border: none;
+				outline: none;
+				border: 1px solid #000;
+				width: 186px;
+				height: 30px;
+				border-radius:20px 0 0 20px;
+				text-indent: 15px;
+			}
+			.guessNumber .tip p{
+				font-size: 12px;
+				color: #666;
+			}
+			.guessNumber .guessC #btnGuess{
+				border: none;
+				outline: none;
+				border: 1px solid #000;
+				width: 60px;
+				height: 30px;
+				border-radius:0 20px 20px 0; 
+				position: relative;
+				left: 187px;
+				bottom: 32px;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="guessNumber">
+			<h2 class="title">猜数字游戏</h2>
+			<div class="guessC">
+				<input id="numInput" type="number" placeholder="0-10整数，6次机会" />
+				<input id="btnGuess" onclick="guess()" type="button" value="猜数字" />
+			</div>
+			<div class="tip">
+				<p>剩余次数:<span id="time">6</span></p>
+				<p>猜测历史:</p>
+				<p id="tipText"></p>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var targetNum = parseInt(Math.random()*11);
+			console.log(targetNum);
+			
+			var guessTimes=6;
+		    var oTime=document.getElementById("time");
+			var oNumInput=document.getElementById("numInput");
+			var oBtnGuess=document.getElementById("btnGuess");
+			var oTipText=document.getElementById("tipText");
+		
+			function guess(){
+				
+				if(oNumInput.value>targetNum){
+					oTipText.innerHTML +="<br/>你输入的数"+oNumInput.value+"，有点大，可以再小一点";
+					oNumInput.value="";
+					oNumInput.focus();
+					guessTimes-=1;
+					oTime.innerHTML=guessTimes;
+				}
+				else if(oNumInput.value<targetNum){
+					oTipText.innerHTML +="<br/>你输入的数"+oNumInput.value+"，有点小，可以再大一点";
+					oNumInput.value="";
+					oNumInput.focus();
+					guessTimes-=1;
+					oTime.innerHTML=guessTimes;
+			}
+				else{
+					oTipText.innerHTML +="<br/>猜对了!结束游戏。";
+				}
 			}
 			
 		</script>
-	</head>
-	<body>
-		<input type="button" value="设为红色" onclick="color('red')" >
-		<input type="button" value="设为黄色" onclick="color('yellow')" >
-		<input type="button" value="设为蓝色" onclick="color('blue')" >
-		<input type="button" value="设为紫色" onclick="color('#921AFF')" >
-		<input type="button" value="设为粉色" onclick="color('#FFC1E0')" >
-		<input type="button" value="设为橙色" onclick="color('#FFBB77')" >
 	</body>
 </html>
