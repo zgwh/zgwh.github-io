@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<div id="data">
+			<script type="text/javascript">
+			var now;
+			var eleData=document.getElementById("data");
+			function doZero(num){
+				if(num<10){
+					num="0"+num;
+				}
+				return num;
+			}
+			function getTime(){
+				now=new Date();
+				eleData.innerHTML="现在时间是"+now.getFullYear()+"年"+doZero(now.getMonth()+1)+"月"+doZero(now.getDate())+"日"+doZero(now.getHours())+":"+doZero(now.getMinutes())+":"+doZero(now.getSeconds());
+			};
+			getTime();setInterval(getTime,1000);
+			</script>
+		</div>
+	</body>
+</html>
