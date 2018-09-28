@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			.zoomer{
+				width: 450px;
+				border: solid 2px black;
+				/*top right bottom left*/
+			}
+			.zoomer img{
+				width: 100%;
+			}
+			.zoomerHandler{
+			
+				width: 150px;
+				height: 150px;
+				border:solid 1px black;
+				background: url(img/FE.jpg) no-repeat;
+				position: absolute;
+				left: 100px;
+				top: 100px;
+				/*background-position: -100px,-100px;*/
+				border-radius: 50%;
+				margin: -75px 0 0 -75px;
+
+			}
+		</style>
+	</head>
+	<body>
+		<div class="zoomer"><img src="img/FE.jpg"/><div class="zoomerHandler"></div></div>
+		<script type="text/javascript">
+			var szoomer=document.getElementsByClassName("zoomer")[0];
+			var szoomerHandler=document.getElementsByClassName("zoomerHandler")[0];
+			
+			szoomer.addEventListener("mousemove",move);
+			function move(event){
+				var event=event||window.event;
+				console.log(event.pageX,event.pageY);
+				szoomerHandler.style.left=event.pageX+"px";
+				szoomerHandler.style.top=event.pageY+"px";
+				var bx=szoomer.getBoundingClientRect().left-szoomerHandler.getBoundingClientRect().left;
+			    var by=szoomer.getBoundingClientRect().top-szoomerHandler.getBoundingClientRect().top;
+			    szoomerHandler.style.backgroundPositionX=2.442*bx-75+"px";
+			    szoomerHandler.style.backgroundPositionY=2.442*by-75+"px";
+			}
+			szoomer.addEventListener("mouseover",move);
+		</script>
+
+	</body>
+</html>
